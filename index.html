@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Communication Ethics and Strategies in Political Social Media</title>
+
+<style>
+:root{
+  --paper:#e7e7e7;
+  --ink:#111;
+  --gray:#777;
+  --light:#bcbcbc;
+  --blue:#b9dcff;
+  --line:#555;
+}
+
+/* =========================
+   BASIC RESET
+========================= */
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#222;
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+.page{
+  width:100%;
+  max-width:100%;
+  margin:0 auto;
+  background:var(--paper);
+  overflow:hidden;
+}
+
+section{
+  width:100%;
+  padding:32px 5vw;
+  position:relative;
+}
+
+.container{
+  width:100%;
+  max-width:1250px;
+  margin:0 auto;
+}
+
+
+/* =========================
+   COVER
+   Desktop / Laptop style
+   like the reference image
+========================= */
+
+.cover{
+  width:100%;
+  min-height:100vh;
+  min-height:100svh;
+  padding:70px 7vw 40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.cover > div{
+  width:100%;
+  max-width:1400px;
+}
+
+.cover h1{
+  margin:0;
+  max-width:1400px;
+
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(4rem,7.4vw,7.8rem);
+  font-weight:400;
+
+  line-height:.90;
+  letter-spacing:-.055em;
+  text-align:left;
+}
+
+.subtitle{
+  width:100%;
+  text-align:center;
+
+  font-size:clamp(12px,1.25vw,20px);
+  line-height:1.3;
+
+  margin-top:42px;
+}
+
+.serif{
+  font-family:Georgia,"Times New Roman",serif;
+}
+
+.student{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:14px;
+  font-weight:bold;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(1.8rem,5vw,3.2rem);
+  line-height:.95;
+  margin:0 0 18px;
+  text-transform:uppercase;
+}
+
+.big-name{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(3.5rem,9vw,7rem);
+  line-height:.78;
+  font-weight:400;
+  letter-spacing:-.06em;
+  margin:8px 0 25px;
+}
+
+p,li{
+  font-size:14px;
+  line-height:1.38;
+}
+
+p{
+  margin:0 0 15px;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:22px;
+  align-items:start;
+}
+
+.intro-reference-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:start;
+}
+
+.intro-left{
+  min-width:0;
+}
+
+.intro-right{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.intro-img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.selfie-img{
+  max-height:520px;
+  object-fit:cover;
+  object-position:center top;
+}
+
+.vertical-post{
+  max-height:620px;
+}
+
+.video-frame{
+  max-height:450px;
+}
+
+.intro-reference-layout .big-name{
+  margin-top:8px;
+  margin-bottom:22px;
+}
+
+.intro-reference-layout .timeline-title{
+  font-size:11px;
+  line-height:1.2;
+  font-weight:700;
+  margin:14px 0 9px;
+}
+
+.intro-reference-layout .timeline{
+  margin-top:0;
+  gap:10px;
+}
+
+.intro-reference-layout .event{
+  grid-template-columns:60px 1fr;
+  gap:9px;
+}
+
+.intro-reference-layout .date{
+  width:60px;
+  height:60px;
+  font-size:8px;
+  padding:5px;
+}
+
+.intro-reference-layout .bubble{
+  font-size:11px;
+  padding:9px 11px;
+}
+
+
+/* =========================
+   IMAGES
+========================= */
+
+.portrait{
+  width:100%;
+  max-width:100%;
+  height:auto;
+
+}
+
+.media{
+  width:100%;
+  max-width:100%;
+  height:auto;
+  display:block;
+  border:1px solid #222;
+  margin:18px 0;
+}
+
+.news-image{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+ 
+}
+
+.two-col > div > .news-image{
+  width:100%;
+  max-height:650px;
+  object-fit:contain;
+  object-position:center;
+}
+
+.container .news-image{
+  max-height:800px;
+  object-fit:contain;
+}
+
+
+/* =========================
+   TWO COLUMN SECTIONS
+========================= */
+
+.two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:start;
+}
+
+
+/* =========================
+   TITLES / BOXES
+========================= */
+
+.black-title{
+  display:block;
+  background:#000;
+  color:#fff;
+  border-radius:5px;
+  padding:8px 12px;
+  text-align:center;
+  font-size:14px;
+  font-weight:700;
+  margin:18px 0 12px;
+}
+
+.gray-banner{
+  background:#777;
+  color:#fff;
+  text-align:center;
+  font-size:clamp(20px,3vw,30px);
+  font-weight:700;
+  line-height:.95;
+  padding:12px;
+  margin:8px 0 24px;
+}
+
+.box{
+  border:1px solid #555;
+  padding:15px 14px;
+  text-align:center;
+  margin:10px 0;
+}
+
+.box p{
+  margin:0;
+  font-size:12px;
+  line-height:1.3;
+}
+
+.note{
+  border:1px solid #555;
+  padding:14px;
+  text-align:center;
+  margin:15px 0 28px;
+  font-size:12px;
+  line-height:1.3;
+}
+
+.note strong{
+  font-size:13px;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:12px;
+}
+
+.event{
+  display:grid;
+  grid-template-columns:70px 1fr;
+  gap:10px;
+  align-items:center;
+}
+
+.date{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background:#000;
+  color:#fff;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+  padding:8px;
+  font-size:10px;
+  line-height:1.1;
+  font-weight:bold;
+}
+
+.bubble{
+  background:#b9b9b9;
+  padding:11px 13px;
+  border-radius:0 25px 25px 0;
+
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:13px;
+  line-height:1.05;
+}
+
+.timeline-title{
+  font-size:12px;
+  font-weight:700;
+  text-transform:uppercase;
+  margin:8px 0 10px;
+}
+
+
+/* =========================
+   STRATEGIES
+========================= */
+
+.strategy-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px 22px;
+}
+
+.strategy{
+  margin:0;
+  min-width:0;
+}
+
+.strategy .black-title,
+.strategy .blue-title{
+  margin:0 0 8px;
+}
+
+.blue-title{
+  background:var(--blue);
+  border:1px solid #333;
+  border-radius:20px;
+  padding:7px 10px;
+  text-align:center;
+  font-size:12px;
+  font-weight:700;
+}
+
+.strategy .box{
+  min-height:75px;
+}
+
+.strategy .box p{
+  font-size:11px;
+  line-height:1.25;
+}
+
+
+/* =========================
+   CHECKLIST / LESSON
+========================= */
+
+.checklist{
+  font-size:12px;
+  line-height:1.4;
+  padding-left:18px;
+  margin-top:8px;
+}
+
+.checklist li{
+  font-size:12px;
+  margin:3px 0;
+}
+
+.lesson-box p{
+  font-size:12px;
+  line-height:1.35;
+}
+
+
+/* =========================
+   REFERENCES
+========================= */
+
+.refs .box{
+  text-align:left;
+}
+
+.refs p{
+  font-size:10px;
+  line-height:1.25;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+
+.refs a{
+  color:#111;
+  text-decoration:none;
+}
+
+.refs a:hover{
+  text-decoration:underline;
+}
+
+.divider{
+  height:1px;
+  background:#777;
+  margin:12px 0;
+}
+
+.link{
+  overflow-wrap:anywhere;
+  word-break:break-word;
+  margin-top:20px;
+}
+
+
+/* =========================
+   THANK YOU
+========================= */
+
+.thank-you{
+  min-height:100vh;
+  min-height:100svh;
+  padding:40px 5vw 80px;
+  text-align:center;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.thank-image{
+  display:block;
+  width:100%;
+  max-width:1100px;
+  max-height:800px;
+  height:auto;
+  margin:0 auto 55px;
+  object-fit:contain;
+  object-position:center;
+}
+
+.thank-title{
+  background:#000;
+  color:#fff;
+  border-radius:5px;
+  padding:18px 12px;
+
+  font-size:clamp(1.8rem,5vw,3.5rem);
+  font-weight:700;
+  line-height:1.05;
+
+  margin:0 auto 20px;
+  max-width:900px;
+  width:100%;
+}
+
+.student-name{
+  font-size:18px;
+  font-weight:700;
+  margin-top:15px;
+}
+
+.course{
+  font-size:14px;
+  margin-top:4px;
+}
+
+.email-icon{
+  font-size:16px;
+  margin-top:18px;
+}
+
+.email{
+  font-size:12px;
+  margin-top:5px;
+  overflow-wrap:anywhere;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:22px 15px;
+  font-size:10px;
+  line-height:1.5;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width:900px){
+
+  section{
+    padding:28px 5vw;
+  }
+
+  .cover{
+    padding:55px 6vw 35px;
+  }
+
+  .cover h1{
+    font-size:clamp(3.2rem,8vw,5.8rem);
+  }
+
+  .subtitle{
+    margin-top:30px;
+    font-size:14px;
+  }
+
+  .intro-reference-layout{
+    gap:18px;
+  }
+
+  .two-col{
+    gap:20px;
+  }
+
+  .strategy-grid{
+    gap:14px;
+  }
+}
+
+
+/* =====================================================
+   PHONE
+===================================================== */
+
+@media (max-width:600px){
+
+  body{
+    background:var(--paper);
+  }
+
+  .page{
+    width:100%;
+  }
+
+  section{
+    padding:24px 18px;
+  }
+
+  /* COVER */
+
+  .cover{
+    width:100%;
+    min-height:100svh;
+    padding:30px 22px 24px;
+    justify-content:center;
+  }
+
+  .cover > div{
+    width:100%;
+  }
+
+  .cover h1{
+    width:100%;
+    max-width:100%;
+
+    /*
+      Fluid title:
+      it automatically scales with phone width.
+    */
+    font-size:clamp(2.35rem,10.8vw,4rem);
+
+    line-height:.92;
+    letter-spacing:-.045em;
+    text-align:left;
+
+    overflow-wrap:normal;
+    word-break:normal;
+  }
+
+  .subtitle{
+    margin-top:25px;
+    font-size:10px;
+    line-height:1.35;
+    text-align:center;
+  }
+
+
+  /* INTRO */
+
+  .intro-reference-layout{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .intro-left{
+    order:1;
+  }
+
+  .intro-right{
+    order:2;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+  .intro-right .selfie-img{
+    grid-column:1 / -1;
+    max-height:520px;
+  }
+
+  .intro-right .vertical-post,
+  .intro-right .video-frame{
+    max-height:430px;
+  }
+
+  .student{
+    font-size:9px;
+  }
+
+  .big-name{
+    font-size:clamp(2.2rem,10vw,3.2rem);
+    line-height:.82;
+    margin:7px 0 18px;
+  }
+
+  p,li{
+    font-size:12px;
+    line-height:1.42;
+  }
+
+  .meta{
+    font-size:10px;
+    line-height:1.4;
+  }
+
+  .link{
+    margin-top:14px;
+  }
+
+
+  /* TIMELINE */
+
+  .timeline-title{
+    font-size:9px;
+    line-height:1.25;
+    margin:12px 0 8px;
+  }
+
+  .timeline{
+    gap:8px;
+  }
+
+  .event{
+    grid-template-columns:50px 1fr;
+    gap:8px;
+  }
+
+  .date{
+    width:50px;
+    height:50px;
+    font-size:7px;
+    padding:5px;
+  }
+
+  .bubble{
+    padding:8px 9px;
+    font-size:10px;
+    line-height:1.15;
+  }
+
+
+  /* ALL TWO COLUMNS BECOME ONE */
+
+  .two-col{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+
+  /* MESSAGE BOXES */
+
+  .black-title{
+    font-size:10px;
+    padding:6px 8px;
+    border-radius:4px;
+    margin:10px 0 7px;
+  }
+
+  .box{
+    padding:11px 9px;
+    margin:7px 0;
+  }
+
+  .box p{
+    font-size:10px;
+    line-height:1.3;
+  }
+
+  .note{
+    padding:10px;
+    font-size:9px;
+    line-height:1.3;
+    margin:10px 0 16px;
+  }
+
+  .note strong{
+    font-size:10px;
+  }
+
+
+  /* BANNERS */
+
+  .gray-banner{
+    font-size:20px;
+    line-height:.95;
+    padding:8px;
+    margin:8px 0 18px;
+  }
+
+
+  /* STRATEGIES STACK */
+
+  .strategy-grid{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .blue-title{
+    font-size:9px;
+    padding:5px 7px;
+  }
+
+  .strategy .box{
+    min-height:0;
+  }
+
+  .strategy .box p{
+    font-size:9px;
+    line-height:1.3;
+  }
+
+
+  /* CHECKLIST */
+
+  .checklist{
+    font-size:10px;
+    line-height:1.4;
+    padding-left:18px;
+  }
+
+  .checklist li{
+    font-size:10px;
+    margin:3px 0;
+  }
+
+  .lesson-box p{
+    font-size:10px;
+    line-height:1.35;
+  }
+
+
+  /* REFERENCES */
+
+  .refs p{
+    font-size:8px;
+    line-height:1.3;
+  }
+
+  .divider{
+    margin:8px 0;
+  }
+
+  .container .news-image{
+    max-height:none;
+  }
+
+
+  /* THANK YOU */
+
+  .thank-you{
+    min-height:100svh;
+    padding:28px 18px 55px;
+  }
+
+  .thank-image{
+    max-height:none;
+    margin-bottom:45px;
+  }
+
+  .thank-title{
+    width:100%;
+    font-size:clamp(1.4rem,7vw,2.3rem);
+    padding:13px 9px;
+  }
+
+  .student-name{
+    font-size:12px;
+  }
+
+  .course{
+    font-size:9px;
+  }
+
+  .email-icon{
+    font-size:10px;
+    margin-top:12px;
+  }
+
+  .email{
+    font-size:7px;
+  }
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width:380px){
+
+  section{
+    padding:20px 14px;
+  }
+
+  .cover{
+    padding:26px 18px 18px;
+  }
+
+  .cover h1{
+    font-size:2.25rem;
+    line-height:.92;
+  }
+
+  .subtitle{
+    font-size:9px;
+  }
+
+  /*
+    Images stack on very narrow phones
+    instead of becoming too small.
+  */
+  .intro-right{
+    grid-template-columns:1fr;
+  }
+
+  .intro-right .selfie-img,
+  .intro-right .vertical-post,
+  .intro-right .video-frame{
+    grid-column:auto;
+    max-height:none;
+  }
+
+  .big-name{
+    font-size:28px;
+  }
+
+  p,li{
+    font-size:11px;
+  }
+
+  .two-col{
+    gap:12px;
+  }
+}
+
+
+/* =====================================================
+   LARGE LAPTOP / DESKTOP
+===================================================== */
+
+@media (min-width:1200px){
+
+  section{
+    padding-left:6vw;
+    padding-right:6vw;
+  }
+
+  .cover{
+    padding-left:8vw;
+    padding-right:8vw;
+  }
+
+  .cover h1{
+    font-size:clamp(5rem,7vw,8rem);
+  }
+
+  .subtitle{
+    margin-top:42px;
+  }
+}
+
+
+/* =====================================================
+   PRINT
+===================================================== */
+
+
+/* =====================================================
+   REFERENCE IMAGE SIZING / ALIGNMENT FIX
+   Keeps each source image's natural aspect ratio and
+   matches the screenshot-style right-column sizing.
+===================================================== */
+
+/* Desktop: wider page like the supplied 1366px reference */
+@media (min-width:901px){
+  section{
+    padding-left:2vw;
+    padding-right:2vw;
+  }
+
+  .container{
+    max-width:1310px;
+  }
+
+  .intro-reference-layout{
+    grid-template-columns:minmax(0,1.32fr) minmax(0,1fr);
+    gap:30px;
+  }
+
+  /* IMPORTANT: don't crop the portrait images */
+  .intro-right .intro-img,
+  .intro-right .selfie-img,
+  .intro-right .vertical-post,
+  .intro-right .video-frame{
+    display:block;
+    width:100%;
+    max-width:545px;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    object-position:center center;
+    margin-left:auto;
+    margin-right:0;
+  }
+
+  /* The response/reference images stay in their natural landscape ratio */
+  .two-col > div > .news-image,
+  .container .news-image{
+    width:100%;
+    height:auto !important;
+    max-width:545px;
+    max-height:none !important;
+    object-fit:contain !important;
+    margin-left:auto;
+    margin-right:0;
+  }
+
+  .refs .two-col > div:last-child .news-image{
+    max-width:545px;
+  }
+
+  .refs > .container .news-image{
+    max-width:545px;
+  }
+
+  /* Final page image should be the same compact media width seen in the reference */
+  .thank-you{
+    padding-left:2vw;
+    padding-right:2vw;
+  }
+
+  .thank-image{
+    width:545px;
+    max-width:545px;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    margin:0 auto 28px;
+  }
+}
+
+/* Mobile: always fit the screen without distortion */
+@media (max-width:900px){
+  .intro-right .intro-img,
+  .intro-right .selfie-img,
+  .intro-right .vertical-post,
+  .intro-right .video-frame,
+  .two-col > div > .news-image,
+  .container .news-image,
+  .thank-image{
+    width:100%;
+    max-width:100%;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
+  }
+}
+
+@media print{
+
+  body{
+    background:#fff;
+  }
+
+  .page{
+    width:100%;
+    max-width:none;
+  }
+}
+
+/* =====================================================
+   REFERENCE-MATCHED ARTBOARD DESIGN — 1366px DESKTOP
+   ===================================================== */
+@media (min-width:901px){
+  body{background:#222;}
+  .page{background:#e7e7e7; width:100%; max-width:1366px; margin:0 auto;}
+  section{padding:38px 50px;}
+
+  /* COVER */
+  .cover{min-height:100vh; padding:70px 118px 45px; justify-content:center;}
+  .cover h1{font-size:102px; line-height:.91; letter-spacing:-.055em; max-width:1120px;}
+  .subtitle{font-size:32px; margin-top:42px;}
+
+  /* INTRO — image column mirrors reference */
+  .intro-reference-layout{grid-template-columns:56% 44%; gap:30px; padding-left:25px; padding-right:18px;}
+  .intro-left{padding-top:10px;}
+  .student{font-size:23px; font-weight:400; margin-bottom:20px;}
+  .big-name{font-size:88px; line-height:.82; margin:0 0 38px; letter-spacing:-.065em;}
+  .intro-left p{font-size:27px; line-height:1.34; margin-bottom:24px;}
+  .intro-left .meta{font-size:28px; line-height:1.38; margin-top:22px;}
+  .intro-left .main-message{font-size:27px; line-height:1.35;}
+  .intro-left .link{font-size:25px; margin-top:25px;}
+  .intro-right{gap:18px; padding-top:0;}
+  .intro-right .selfie-img{height:590px; width:100%; max-height:none; object-fit:cover; object-position:center top;}
+  .intro-right .vertical-post{height:auto; max-height:none; width:100%; object-fit:contain;}
+  .intro-right .video-frame{height:auto; max-height:none; width:100%; object-fit:contain;}
+
+  /* TIMELINE */
+  .intro-reference-layout .timeline-title{font-size:20px; line-height:1.25; margin:36px 0 18px;}
+  .intro-reference-layout .timeline{gap:28px;}
+  .intro-reference-layout .event{grid-template-columns:165px 1fr; gap:18px;}
+  .intro-reference-layout .date{width:150px; height:150px; font-size:22px; padding:14px;}
+  .intro-reference-layout .bubble{font-size:30px; line-height:.93; padding:22px 30px; border-radius:0 50px 50px 0; min-height:112px; display:flex; align-items:center;}
+
+  /* MESSAGE ANALYSIS */
+  .two-col{grid-template-columns:1fr 1fr; gap:58px;}
+  .black-title{font-size:20px; padding:12px 18px; border-radius:14px; margin:18px auto 10px; max-width:300px;}
+  .box{padding:18px 16px; margin:8px 0 22px;}
+  .box p{font-size:19px; line-height:1.28;}
+  .note{font-size:18px; line-height:1.3; padding:18px; margin-top:20px;}
+  .note strong{font-size:19px;}
+  .two-col > div > .news-image{width:100%; max-height:none; object-fit:contain; margin-top:0;}
+  section h2{font-family:Arial,Helvetica,sans-serif; font-size:28px; margin:42px 0 22px;}
+
+  /* MESSAGE DO — four cards arranged exactly as the reference */
+  .two-col .two-col{gap:58px;}
+
+  /* ETHICS / STRATEGIES BANNERS */
+  .gray-banner{width:580px; max-width:100%; margin:18px auto 38px; padding:14px 20px; font-size:34px; line-height:.92;}
+  .strategy-grid{grid-template-columns:1fr 1fr; gap:42px 62px; align-items:start;}
+  .strategy{display:grid; grid-template-columns:295px 1fr; align-items:center; gap:0; min-height:110px;}
+  .strategy .black-title,.strategy .blue-title{margin:0; border-radius:22px; padding:12px 15px; font-size:18px; min-height:48px; display:flex; align-items:center; justify-content:center; z-index:2;}
+  .strategy .box{margin:0 0 0 -1px; min-height:96px; display:flex; align-items:center; justify-content:center; padding:15px 14px;}
+  .strategy .box p{font-size:18px; line-height:1.22;}
+  .strategy:nth-child(even){grid-template-columns:1fr 295px;}
+  .strategy:nth-child(even) .black-title,.strategy:nth-child(even) .blue-title{grid-column:2; grid-row:1;}
+  .strategy:nth-child(even) .box{grid-column:1; grid-row:1; margin:0 -1px 0 0;}
+
+  /* ETHICS first section starts with centered STOP/CHECK box */
+  section .black-title[style*="margin-top:0"]{width:640px; max-width:100%; margin:0 auto 10px !important; font-size:23px; border-radius:0;}
+  section .box[style*="padding:25px"]{max-width:690px; margin:0 auto 42px; min-height:120px; display:flex; align-items:center; justify-content:center;}
+  section .box[style*="padding:25px"] p{font-size:25px; line-height:1.2;}
+
+  /* LOOKING BEYOND / LESSON */
+  .two-col > div > .black-title{max-width:100%;}
+  .lesson-box{min-height:400px;}
+  .lesson-box p{font-size:19px; line-height:1.35;}
+  .checklist{font-size:19px; padding-left:28px;}
+  .checklist li{font-size:19px; margin:7px 0;}
+
+  /* REFERENCES */
+  .refs .two-col{align-items:start;}
+  .refs .black-title{max-width:520px;}
+  .refs .box{min-height:330px; padding:25px 28px;}
+  .refs p{font-size:18px; line-height:1.35;}
+  .refs .news-image{max-height:650px; object-fit:contain;}
+  .refs > .container{margin-top:34px !important; text-align:right;}
+  .refs > .container .news-image{width:520px; margin-left:auto;}
+
+  /* THANK YOU — image is not allowed to push the title off alignment */
+  .thank-you{min-height:100vh; padding:55px 100px 70px;}
+  .thank-image{width:520px; max-width:520px; max-height:360px; margin:0 auto 45px; object-fit:contain;}
+  .thank-title{max-width:900px; font-size:42px; padding:20px 15px; border-radius:14px; margin-bottom:34px;}
+  .student-name{font-size:30px; margin-top:0;}
+  .course{font-size:24px;}
+  .email-icon{font-size:20px; margin-top:28px;}
+  .email{font-size:19px;}
+}
+
+@media (min-width:901px) and (max-width:1100px){
+  .cover{padding-left:70px; padding-right:70px;}
+  .cover h1{font-size:78px;}
+  .subtitle{font-size:25px;}
+  .intro-reference-layout{grid-template-columns:1fr 1fr;}
+  .intro-left p,.intro-left .main-message{font-size:20px;}
+  .intro-left .meta{font-size:20px;}
+  .big-name{font-size:68px;}
+  .strategy{grid-template-columns:220px 1fr;}
+  .strategy:nth-child(even){grid-template-columns:1fr 220px;}
+  .strategy .box p{font-size:15px;}
+}
+
+
+/* =========================================================
+   FINAL REFERENCES MATCH — supplied screenshot
+   ========================================================= */
+@media (min-width:901px){
+  .refs{
+    padding: 42px 35px 35px;
+  }
+
+  .refs .two-col{
+    grid-template-columns: 58% 42%;
+    gap: 0;
+    align-items: start;
+  }
+
+  .refs .two-col > div:first-child{
+    padding: 70px 20px 0 0;
+  }
+
+  .refs .two-col > div:last-child{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 0;
+  }
+
+  .refs .black-title{
+    width: 100%;
+    max-width: 525px;
+    margin: 0 auto 38px;
+    padding: 9px 18px;
+    border-radius: 12px;
+    font-size: 30px;
+    line-height: 1.05;
+  }
+
+  .refs .box{
+    border: 0;
+    min-height: 0;
+    padding: 0 12px;
+    margin: 0;
+    background: transparent;
+  }
+
+  .refs .box p{
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 1.30;
+    text-align: center;
+  }
+
+  .refs .divider{
+    display: none;
+  }
+
+  .refs .two-col > div:last-child .news-image{
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    margin: 0;
+  }
+
+  .refs > .container{
+    width: 45%;
+    max-width: none;
+    margin: 0 0 0 55% !important;
+    padding: 0;
+    text-align: left;
+  }
+
+  .refs > .container .news-image{
+    display: block;
+    width: 100%;
+    max-width: 570px;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    margin: 0;
+  }
+}
+
+/* Smaller screens */
+@media (max-width:900px){
+  .refs .two-col{
+    grid-template-columns: 1fr;
+  }
+
+  .refs .two-col > div:first-child{
+    padding: 0;
+  }
+
+  .refs .two-col > div:last-child{
+    justify-content: center;
+  }
+
+  .refs .two-col > div:last-child .news-image,
+  .refs > .container .news-image{
+    width: 100%;
+    max-width: 100%;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    margin: 0 auto;
+  }
+
+  .refs > .container{
+    width: 100%;
+    margin: 22px 0 0 !important;
+    padding: 0;
+  }
+}
+
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<!-- COVER -->
+<section class="cover">
+  <div>
+    <h1>Communication Ethics<br>and Strategies in<br>Political Social Media</h1>
+    <div class="subtitle">Analyzing a Social Media Post of VP Sara Duterte</div>
+  </div>
+</section>
+
+<!-- INTRO + FEATURED IMAGE -->
+<section class="intro-reference-layout">
+  <div class="intro-left">
+    <div class="student">BSND - 2A</div>
+    <h2 class="big-name">I am Joyce<br>Lopez</h2>
+
+    <p>Hi! I’m Joyce, a BSND student who is learning more about nutrition, health, and the importance of communicating information responsibly. As a student and social media user, I’m also learning to look beyond what I see online and think critically about the messages being shared.</p>
+
+    <p>For this blog, we will be exploring communication ethics and strategies in political social media through a post involving VP Sara Duterte. Through this activity, I hope to better understand how communication can influence people’s thoughts, emotions, and opinions.</p>
+    
+    <div class="intro-right">
+    <img class="intro-img selfie-img" src="Image0.PNG" alt="Joyce Lopez">
+</div>
+
+    <div class="meta">
+      <div>Politician: Sara Duterte</div>
+      <div>Date: February 7, 2026</div>
+      <div>Platform: TikTok</div>
+      <div>Account: Inday Manila Bulletin</div>
+      <div>Issue: Impeachment complaint</div>
+    </div>
+
+    <p class="meta main-message"><strong>Main Message:</strong> VP Sara Duterte responded to the impeachment complaint endorsed by Akbayan. She said the complaint had no attached evidence proving the allegations and described the impeachment effort as politically motivated.</p>
+
+    <div class="link meta">
+      Link: <a href="https://vt.tiktok.com/ZSqmxWsfn/" target="_blank" rel="noopener">https://vt.tiktok.com/ZSqmxWsfn/</a>
+    </div>
+     <div class="intro-right">
+    <img class="intro-img vertical-post" src="Image1.jfif" alt="Manila Bulletin social media post">
+    </div>
+
+    <div class="timeline-title">CONTEXT<br>WHAT HAPPENED BEFORE THE STATEMENT?</div>
+
+    <div class="timeline">
+      <div class="event">
+        <div class="date">February 2,<br>2026</div>
+        <div class="bubble">Two new impeachment complaints were filed against Sara Duterte.</div>
+      </div>
+
+      <div class="event">
+        <div class="date">February 6,<br>2026</div>
+        <div class="bubble">The complaints were transmitted to the House Speaker’s office.</div>
+      </div>
+
+      <div class="event">
+        <div class="date">February 7,<br>2026</div>
+        <div class="bubble">Sara Duterte released her response on Facebook.</div>
+      </div>
+    </div>
+  </div>
+
+  
+    <div class="intro-right">
+    <img class="intro-img video-frame" src="Image2.jfif" alt="Sara Duterte video statement">
+  </div>
+</section>
+
+
+<!-- MESSAGE ANALYSIS -->
+<section>
+  <div class="two-col">
+    <div>
+      <div class="black-title">HER RESPONSE</div>
+      <div class="box">
+        <p>SHE QUESTIONED THE EVIDENCE BEHIND THE IMPEACHMENT EFFORT AND DESCRIBED THE IMPEACHMENT EFFORT AS POLITICAL.</p>
+      </div>
+
+      <div class="note">
+        <strong>NOTE:</strong><br>
+        AN ALLEGATION OR COMPLAINT DOES NOT AUTOMATICALLY MEAN THAT SOMEONE IS GUILTY.
+      </div>
+    </div>
+
+    <div>
+    </div>
+  </div>
+
+  <h2 class="message-do-heading">WHAT DOES THE MESSAGE DO?</h2>
+
+  <div class="two-col">
+    <div>
+      <div class="black-title">THE MESSAGE</div>
+      <div class="box"><p>IT PRESENTS SARA DUTERTE'S SIDE AND CHALLENGES THE BASIS OF THE IMPEACHMENT COMPLAINT.</p></div>
+
+      <div class="black-title">THE EMOTION</div>
+      <div class="box"><p>THE STATEMENT MAY MAKE SUPPORTERS FEEL SYMPATHY OR FRUSTRATION, WHILE CRITICS MAY FEEL DOUBTFUL OR UNCONVINCED.</p></div>
+    </div>
+
+    <div>
+      <div class="black-title">THE MISSING SIDE</div>
+      <div class="box"><p>THE POST MAINLY COMMUNICATES HER PERSPECTIVE, SO VIEWERS NEED TO LOOK AT THE COMPLAINANTS’ STATEMENTS AND SUPPORT DOCUMENTS AS WELL.</p></div>
+
+      <div class="black-title">THE IMPORTANT QUESTION</div>
+      <div class="box"><p>ARE WE ACCEPTING THE MESSAGE BECAUSE OF THE EVIDENCE—OR BECAUSE OF HOW EFFECTIVELY IT IS COMMUNICATED?</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ETHICS -->
+<section>
+  <div class="black-title ethics-stop">STOP. CHECK. THINK. VERIFY.</div>
+  <div class="box ethics-check-box">
+    <p>CRITICAL THINKING MEANS LOOKING BEYOND ONE POST BEFORE ACCEPTING ITS CLAIMS AS TRUE.</p>
+  </div>
+
+  <div class="gray-banner">COMMUNICATION<br>ETHICS</div>
+
+  <div class="strategy-grid">
+    <div class="strategy">
+      <div class="blue-title">TRUTHFULNESS</div>
+      <div class="box"><p>HER CLAIMS ABOUT THE COMPLAINT CAN BE CHECKED AGAINST THE ORIGINAL DOCUMENTS AND CREDIBLE REPORTS.</p></div>
+    </div>
+
+    <div class="strategy">
+      <div class="black-title">FAIRNESS</div>
+      <div class="box"><p>THE POST MAINLY PRESENTS HER SIDE, SO THE OPPOSING SIDE AND ADDITIONAL CONTEXT SHOULD ALSO BE CONSIDERED.</p></div>
+    </div>
+
+    <div class="strategy">
+      <div class="blue-title">RESPECT &amp; DECENCY</div>
+      <div class="box"><p>CRITICISM SHOULD FOCUS ON THE ISSUE RATHER THAN UNNECESSARILY ATTACKING THE PEOPLE INVOLVED.</p></div>
+    </div>
+
+    <div class="strategy">
+      <div class="black-title">ACCOUNTABILITY</div>
+      <div class="box"><p>SHE DIRECTLY RESPONDED TO THE IMPEACHMENT COMPLAINT AND EXPLAINED HER POSITION.</p></div>
+    </div>
+
+    <div class="strategy">
+      <div class="blue-title">RESPONSIBILITY</div>
+      <div class="box"><p>POLITICAL STATEMENTS CAN INFLUENCE PUBLIC OPINION, SO BOTH THE COMMUNICATOR AND THE AUDIENCE HAVE A RESPONSIBILITY TO AVOID SPREADING MISLEADING INFORMATION.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGIES -->
+<section>
+  <div class="gray-banner">COMMUNICATION<br>STRATEGIES</div>
+
+  <div class="strategy-grid">
+    <div class="strategy">
+      <div class="black-title">DENIAL</div>
+      <div class="box"><p>HER CLAIMS ABOUT THE COMPLAINT CAN BE CHECKED AGAINST THE ORIGINAL DOCUMENTS AND CREDIBLE REPORTS.</p></div>
+    </div>
+
+    <div class="strategy">
+      <div class="blue-title">COUNTERATTACK</div>
+      <div class="box"><p>HER RESPONSE ALSO CRITICIZES THE PEOPLE OR GROUP BEHIND THE IMPEACHMENT EFFORT.</p></div>
+    </div>
+
+    <div class="strategy">
+      <div class="black-title">FRAMING</div>
+      <div class="box"><p>THE MOST PROMINENT STRATEGY IS FRAMING BECAUSE THE ISSUE IS PRESENTED AS A POLITICALLY MOTIVATED EFFORT RATHER THAN SIMPLY AN IMPEACHMENT COMPLAINT.</p></div>
+    </div>
+
+    <div class="strategy">
+      <div class="blue-title">EMOTIONAL APPEAL</div>
+      <div class="box"><p>THE STATEMENT CAN ENCOURAGE FEELINGS OF SYMPATHY, FRUSTRATION, OR ANGER.</p></div>
+    </div>
+
+    <div class="strategy">
+      <div class="black-title">SELECTIVE PRESENTATION</div>
+      <div class="box"><p>THE MESSAGE EMPHASIZES INFORMATION SUPPORTING HER POSITION, WHICH MAKES IT IMPORTANT TO EXAMINE OTHER AVAILABLE INFORMATION.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOOKING BEYOND -->
+<section>
+  <div class="two-col">
+    <div>
+      <div class="black-title">LOOKING BEYOND THE POLITICS</div>
+      <div class="box">
+        <p>THE WAY PEOPLE INTERPRET POLITICAL MESSAGES CAN BE INFLUENCED BY THEIR EXISTING BELIEFS AND LOYALTY.</p>
+        <br>
+        <p>A SUPPORTER OF SARA DUTERTE MIGHT VIEW THE STATEMENT AS A STRONG DEFENSE AGAINST POLITICAL ATTACKS. AN OPPONENT MIGHT INTERPRET THE SAME MESSAGE AS AN ATTEMPT TO SHIFT ATTENTION AWAY FROM THE ACCUSATIONS.</p>
+      </div>
+
+      <div class="black-title" style="margin-top:18px;">CHECK THESE:</div>
+      <ul class="checklist">
+        <li>THE ORIGINAL IMPEACHMENT COMPLAINT</li>
+        <li>OFFICIAL GOVERNMENT DOCUMENTS</li>
+        <li>STATEMENTS FROM BOTH SIDES</li>
+        <li>EVIDENCE SUPPORTING THE CLAIMS</li>
+        <li>CREDIBLE NEWS REPORTS</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="black-title">WHAT I LEARNED</div>
+      <div class="box lesson-box">
+        <p>THIS ACTIVITY TAUGHT ME THAT POLITICAL COMMUNICATION IS NOT ONLY ABOUT WHAT A PERSON SAYS, BUT ALSO HOW THE MESSAGE IS PRESENTED. STRATEGIES SUCH AS FRAMING, DENIAL, COUNTERATTACK, AND EMOTIONAL APPEAL CAN INFLUENCE HOW PEOPLE UNDERSTAND AN ISSUE.</p>
+        <br>
+        <p>I LEARNED THAT I SHOULD NOT IMMEDIATELY BELIEVE A POLITICAL POST JUST BECAUSE IT SOUNDS CONVINCING OR BECAUSE I SUPPORT THE PERSON WHO POSTED IT. I SHOULD CHECK RELIABLE SOURCES, CONSIDER DIFFERENT PERSPECTIVES, AND SEPARATE FACTS FROM OPINIONS.</p>
+        <br>
+        <p>I ALSO LEARNED THAT ETHICAL COMMUNICATION REQUIRES TRUTHFULNESS, FAIRNESS, RESPECT, AND RESPONSIBILITY. AS A BSND STUDENT, THIS IS ALSO IMPORTANT BECAUSE COMMUNICATING INFORMATION RESPONSIBLY IS PART OF BEING A RESPONSIBLE COMMUNICATOR.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCES + FINAL IMAGES -->
+<section class="refs">
+  <div class="two-col">
+
+    <!-- REFERENCES -->
+    <div>
+      <div class="black-title">REFERENCES</div>
+
+      <div class="box">
+        <p>
+          <a href="https://vt.tiktok.com/ZSqmxWsfn/"
+             target="_blank" rel="noopener">
+            https://vt.tiktok.com/ZSqmxWsfn/
+          </a>
+        </p>
+
+        <p>
+          <a href="https://www.facebook.com/gmanews/videos/impeachment-complaint-vs-vice-pres-duterte-filed-anew-gma-integrated-news/1439702834332192/"
+             target="_blank" rel="noopener">
+            https://www.facebook.com/gmanews/videos/impeachment-complaint-vs-vice-pres-duterte-filed-anew-gma-integrated-news/1439702834332192/
+          </a>
+        </p>
+
+        <p>
+          <a href="https://www.facebook.com/mayorindaysaraduterteofficial/videos/pahayagfebruary-07-2026assalamu-alaykum-warahmatullahi-wabarakatuhmadayaw-ug-maa/1219736903057002/"
+             target="_blank" rel="noopener">
+            https://www.facebook.com/mayorindaysaraduterteofficial/videos/pahayagfebruary-07-2026assalamu-alaykum-warahmatullahi-wabarakatuhmadayaw-ug-maa/1219736903057002/
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- TOP RIGHT IMAGE -->
+    <div>
+      <img class="news-image"
+           src="Image3.jfif"
+           alt="Reference image">
+    </div>
+
+  </div>
+
+  <!-- LARGE LOWER IMAGE -->
+  <div class="container">
+    <img class="news-image"
+         src="Image1.jfif"
+         alt="Social media image">
+  </div>
+</section>
+
+<!-- THANK YOU -->
+<section class="thank-you">
+  <img class="thank-image"
+       src="Image2.jfif"
+       alt="Featured image">
+
+  <div class="thank-title">THANK YOU FOR READING!</div>
+
+  <div class="student-name">JOYCE S. LOPEZ</div>
+  <div class="course">BSND 2A</div>
+
+  <div class="email-icon">✉</div>
+  <div class="email">JOYCE.LOPEZ0210@GMAIL.COM</div>
+</section>
+
+<footer>
+  Communication Ethics and Strategies in Political Social Media<br>
+  BSND - 2A · Joyce Lopez
+</footer>
+
+</div>
+</body>
+</html>
